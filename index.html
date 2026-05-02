@@ -790,6 +790,7 @@ body {
 <nav class="nav" id="nav">
   <div class="nav-inner" id="navInner">
     <button class="nav-btn active" data-section="story">编年史</button>
+    <button class="nav-btn" data-section="council">委员会</button>
     <button class="nav-btn" data-section="npcs">人物志</button>
     <button class="nav-btn" data-section="areas">地域</button>
     <button class="nav-btn" data-section="quests">任务板</button>
@@ -878,32 +879,153 @@ body {
   </div>
 </section>
 
+
+<!-- ─── COUNCIL ─── -->
+<section class="section" id="sec-council">
+  <h2 class="section-heading">建院委员会</h2>
+
+  <div style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-md);padding:1.5rem;margin-bottom:2rem">
+    <p style="color:var(--parchment-dark);font-size:0.95rem;text-indent:2em;margin-bottom:1rem">星芒学院由四位传奇法师共同创立，各司其职。委员会在伊利·库尔的领导下完成了学院选址、法阵布设、星力评估与医疗体系搭建，最终在山丘矮人领地与幽暗地域之间的战略要地建成学院。</p>
+    <div style="overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;font-size:0.9rem;margin-top:1rem">
+        <thead>
+          <tr style="border-bottom:1px solid rgba(180,150,100,0.3)">
+            <th style="padding:0.6rem 0.8rem;text-align:left;color:var(--gold-pale);font-family:var(--font-display);font-size:0.85rem;letter-spacing:0.05em">成员</th>
+            <th style="padding:0.6rem 0.8rem;text-align:left;color:var(--gold-pale);font-family:var(--font-display);font-size:0.85rem;letter-spacing:0.05em">职位</th>
+            <th style="padding:0.6rem 0.8rem;text-align:left;color:var(--gold-pale);font-family:var(--font-display);font-size:0.85rem;letter-spacing:0.05em">专精</th>
+            <th style="padding:0.6rem 0.8rem;text-align:left;color:var(--gold-pale);font-family:var(--font-display);font-size:0.85rem;letter-spacing:0.05em">职责</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid rgba(180,150,100,0.1)">
+            <td style="padding:0.6rem 0.8rem;color:var(--parchment-light)">伊利·库尔</td>
+            <td style="padding:0.6rem 0.8rem;color:var(--starlight)">核心主导者</td>
+            <td style="padding:0.6rem 0.8rem;color:var(--starlight)">幻术 / 附魔</td>
+            <td style="padding:0.6rem 0.8rem;color:var(--parchment-dark);font-size:0.85rem">建院理念、总体决策、对外交涉</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(180,150,100,0.1)">
+            <td style="padding:0.6rem 0.8rem;color:var(--parchment-light)">阿加扎尔</td>
+            <td style="padding:0.6rem 0.8rem;color:var(--starlight)">战力担当</td>
+            <td style="padding:0.6rem 0.8rem;color:var(--starlight)">土系 / 火系</td>
+            <td style="padding:0.6rem 0.8rem;color:var(--parchment-dark);font-size:0.85rem">防御魔法布设、战斗支援、学院安保</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(180,150,100,0.1)">
+            <td style="padding:0.6rem 0.8rem;color:var(--parchment-light)">泰伦·霍恩</td>
+            <td style="padding:0.6rem 0.8rem;color:var(--starlight)">学术担当</td>
+            <td style="padding:0.6rem 0.8rem;color:var(--starlight)">星象 / 预言</td>
+            <td style="padding:0.6rem 0.8rem;color:var(--parchment-dark);font-size:0.85rem">星力评估、星象观测、预言预警</td>
+          </tr>
+          <tr>
+            <td style="padding:0.6rem 0.8rem;color:var(--parchment-light)">玛拉·桑德</td>
+            <td style="padding:0.6rem 0.8rem;color:var(--starlight)">后勤与医疗</td>
+            <td style="padding:0.6rem 0.8rem;color:var(--starlight)">治愈 / 符文</td>
+            <td style="padding:0.6rem 0.8rem;color:var(--parchment-dark);font-size:0.85rem">医疗支援、符文布设、情绪调和</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 伊利·库尔 -->
+  <div class="chapter open" style="margin-bottom:1.2rem">
+    <div class="chapter-header" onclick="toggleChapter(this)">
+      <div class="chapter-num" style="font-size:1.3rem;min-width:2.5rem">✦</div>
+      <div class="chapter-title-block">
+        <div class="chapter-title">伊利·库尔</div>
+        <div class="chapter-subtitle">半精灵 · 幻术/附魔法师 · 中立善良 · CR 8</div>
+      </div>
+      <span class="chapter-chevron">▾</span>
+    </div>
+    <div class="chapter-body"><div class="chapter-content">
+      <p>委员会核心主导者，星芒学院建院理念的提出者。精灵父亲与人类母亲的血脉赋予她超越两族的视野，在剑湾魔法界声望极高。她坚信魔法不应被种族或血统垄断——这份信念既是星芒学院的基石，也是学院吸引各族前来求学的根本原因。</p>
+      <p>外表看似三十岁左右的半精灵女性。银灰色长发束成低马尾，发尾点缀细碎的星象符文，这是她为自己加持的幻术印记。眼眸呈淡紫色，是长期修习幻术魔法的印记。身着月白色法师长袍，绣有精灵藤蔓与星芒图案，周身萦绕淡淡的幻术微光。行走时脚步轻盈，几乎无声。</p>
+      <p>温柔克制，责任感极强，心怀悲悯。极度信任同伴——这正是她未能察觉卡隆·泽恩为眼线的原因。不擅阴谋暗算，厌恶以力量掠夺或奴役他人。对所有种族一视同仁，尤其同情被压迫的矮人群体。山丘矮人营地覆灭后，将责任揽在自己身上，表面维持镇定推动学院建设，内心却背负沉重自责。对冒险者始终温和信任，从不迁怒。</p>
+      <div class="event-block">专精幻术防御与心灵附魔。可释放真实幻境、群体隐匿等高阶幻术。能安抚亡魂、净化轻度黑魔法污染。不擅长正面战斗，更擅长防御、辅助与社交交涉。因卡隆的阴谋，在学院法阵外仅剩5级施法能力，但在法阵内仍可发挥传奇水准。</div>
+    </div></div>
+  </div>
+
+  <!-- 阿加扎尔 -->
+  <div class="chapter" style="margin-bottom:1.2rem">
+    <div class="chapter-header" onclick="toggleChapter(this)">
+      <div class="chapter-num" style="font-size:1.3rem;min-width:2.5rem">◆</div>
+      <div class="chapter-title-block">
+        <div class="chapter-title">阿加扎尔</div>
+        <div class="chapter-subtitle">人类 · 元素法师 · 守序善良 · CR 9</div>
+      </div>
+      <span class="chapter-chevron">▾</span>
+    </div>
+    <div class="chapter-body"><div class="chapter-content">
+      <p>委员会战力担当。曾是无冬城皇家法师团成员，因不满法师团对魔法的垄断，离开后加入「盟约者」。负责学院的防御魔法布设与战斗支援，是委员会中最强的正面战斗力量。</p>
+      <p>中年人类男性，身材高大魁梧，面容刚毅。额头有一道浅浅的火焰符文印记，是元素魔法的象征。短发呈深棕色，眼神锐利。身着深红色法师长袍，袖口绣有火焰与岩石图案。手上常年戴着一枚土系魔法戒指，行走时地面会有微弱的震动。</p>
+      <p>豪爽果决，脾气略显急躁。重视荣誉与承诺，极度厌恶阴险狡诈的手段，对红巫师的偷袭与阴谋尤为反感。对矮人种族格外敬重，与山丘矮人首领格伦是旧识。山丘矮人营地覆灭后暴怒不已，主动提出追查红巫师踪迹，却因学术研讨与学院防御布设无法亲自行动，便将希望寄托在冒险者身上。</p>
+      <div class="event-block">专精土系与火系元素魔法。可释放流星火雨、地震术、火焰护盾等高阶元素法术。擅长正面战斗与防御魔法布设，能构建坚固的元素防御壁垒。</div>
+    </div></div>
+  </div>
+
+  <!-- 泰伦·霍恩 -->
+  <div class="chapter" style="margin-bottom:1.2rem">
+    <div class="chapter-header" onclick="toggleChapter(this)">
+      <div class="chapter-num" style="font-size:1.3rem;min-width:2.5rem">◎</div>
+      <div class="chapter-title-block">
+        <div class="chapter-title">泰伦·霍恩</div>
+        <div class="chapter-subtitle">人类 · 星象法师 · 中立 · CR 7</div>
+      </div>
+      <span class="chapter-chevron">▾</span>
+    </div>
+    <div class="chapter-body"><div class="chapter-content">
+      <p>委员会学术担当。专精星象观测、星力解读与预言魔法，负责学院选址的星力评估。他是卡隆·泽恩的「名义导师」——卡隆以星象魔法学徒身份混入委员会，正是借泰伦的信任立足。</p>
+      <p>老年人类男性，头发与胡须均为银白色，梳理整齐。面容清癯，戴一副镶嵌星晶的眼镜，用于辅助星象观测。身着灰色法师长袍，绣有复杂的星象符文。这身长袍的风格与卡隆的极为相近，是卡隆伪装身份的重要依托。手中常年持一根星象法杖，杖头镶嵌一颗巨大的星蓝宝石。几乎不离观测帐篷，很少外出。</p>
+      <p>沉稳内敛，痴迷学术，不擅社交。对星象数据极为严谨，几乎所有精力都放在星力观测与预言上，对世俗的阴谋纷争不甚关心。信任卡隆·泽恩，认可其星象魔法天赋。山丘矮人营地覆灭后虽有惋惜，更在意的却是星力稳定与否，认为「只有建成学院，才能真正抵御黑暗」。</p>
+      <div class="event-block">专精星象观测、星力解读与预言魔法。可精准检测星力浓度、预判星象变化。能释放侦测邪恶、预知危险等低阶预言法术。不擅长战斗，核心作用为学术观测与预言。同样因卡隆的阴谋，在学院法阵外仅剩5级施法能力。</div>
+    </div></div>
+  </div>
+
+  <!-- 玛拉·桑德 -->
+  <div class="chapter" style="margin-bottom:1.2rem">
+    <div class="chapter-header" onclick="toggleChapter(this)">
+      <div class="chapter-num" style="font-size:1.3rem;min-width:2.5rem">♥</div>
+      <div class="chapter-title-block">
+        <div class="chapter-title">玛拉·桑德</div>
+        <div class="chapter-subtitle">人类 · 治愈/符文法师 · 善良中立 · CR 7</div>
+      </div>
+      <span class="chapter-chevron">▾</span>
+    </div>
+    <div class="chapter-body"><div class="chapter-content">
+      <p>委员会后勤与医疗担当。负责学术研讨期间的医疗支援、魔法符文布设，以及安抚各族群的情绪——她是委员会中不可或缺的「调和者」。</p>
+      <p>中年人类女性，面容温婉。浅棕色长发挽成发髻，发髻上插一根镶嵌治愈水晶的发簪。身着淡绿色法师长袍，绣有藤蔓与符文图案。身上散发着淡淡的草药与魔法微光，手上常年拿着一个治愈符文卷轴。待人温和，眼神充满善意。</p>
+      <p>温柔善良，细心体贴。擅长调和矛盾，重视生命，厌恶杀戮与伤害。对所有种族都充满善意，一视同仁。山丘矮人营地覆灭后，主动前往营地废墟救治受伤的矮人幸存者。内心悲痛却始终保持冷静，一边救治伤员，一边安抚幸存者情绪，同时协助伊利·库尔推进学院建设——她希望以学院为依托，为流离失所的族群提供庇护。</p>
+      <div class="event-block">专精治愈魔法与符文魔法。可释放复活术、群体治愈等高阶治愈法术。能布设治愈符文与防御符文。擅长医疗支援与情绪安抚，不擅长战斗。</div>
+    </div></div>
+  </div>
+
+  <!-- 卡隆·泽恩 -->
+  <div class="chapter" style="margin-bottom:1.2rem">
+    <div class="chapter-header" onclick="toggleChapter(this)">
+      <div class="chapter-num" style="font-size:1.3rem;min-width:2.5rem;color:var(--crimson)">☠</div>
+      <div class="chapter-title-block">
+        <div class="chapter-title" style="color:var(--crimson-glow)">卡隆·泽恩</div>
+        <div class="chapter-subtitle">人类 · 星象法师（伪装） · 前护卫长 · 叛徒</div>
+      </div>
+      <span class="chapter-chevron">▾</span>
+    </div>
+    <div class="chapter-body"><div class="chapter-content">
+      <p>星芒学院前护卫长。以星象魔法学徒身份混入委员会，名义上师从泰伦·霍恩。暗中为红巫师效力，策划了对伊利·库尔和泰伦·霍恩的削弱仪式，使两位传奇法师在学院法阵外失去了大部分力量。其背叛是学院建院初期遭受的最大打击。</p>
+      <div class="event-block" style="border-left-color:var(--crimson)">卡隆精通星象魔法——这是其伪装成立的关键。他利用泰伦的学术信任获取星力数据，并将学院防御法阵的弱点泄露给红巫师。罪行暴露后下落不明，目前仍在追查中。</div>
+    </div></div>
+  </div>
+</section>
+
 <!-- ─── NPCS ─── -->
 <section class="section" id="sec-npcs">
   <h2 class="section-heading">人物志</h2>
+  <p style="text-align:center;color:var(--starlight);opacity:0.6;font-size:0.85rem;margin-bottom:1.5rem">委员会成员详见「委员会」板块，此处收录学院镇其他重要人物</p>
   <div class="npc-grid">
-
-    <div class="npc-card" onclick="this.classList.toggle('expanded')">
-      <div class="npc-name">伊利·库尔</div>
-      <div class="npc-race">半精灵 · 传奇法师</div>
-      <div class="npc-brief">星芒学院选址负责人，因卡隆的阴谋失去了大部分魔法能力。</div>
-      <div class="npc-detail"><div class="npc-detail-inner">仅剩5级施法能力，但在学院法阵内仍可发挥20级力量。她是星芒学院建校的核心推动者，以包容多元魔法为理念。</div></div>
-      <div class="npc-expand-hint">点击查看详情</div>
-    </div>
-
-    <div class="npc-card" onclick="this.classList.toggle('expanded')">
-      <div class="npc-name">泰伦·霍恩</div>
-      <div class="npc-race">人类 · 传奇法师</div>
-      <div class="npc-brief">与伊利·库尔一同被困于时间法阵，同样受卡隆算计而失去力量。</div>
-      <div class="npc-detail"><div class="npc-detail-inner">学院建校委员会的核心成员，被困期间与伊利·库尔共同抵御红巫师的阴谋。</div></div>
-      <div class="npc-expand-hint">点击查看详情</div>
-    </div>
 
     <div class="npc-card" onclick="this.classList.toggle('expanded')">
       <div class="npc-name">莱雅米尔斯</div>
       <div class="npc-race">人类 · 16岁少女</div>
       <div class="npc-brief">失去双亲后又失去唯一亲人哥哥，立志成为独当一面的勇士。</div>
-      <div class="npc-detail"><div class="npc-detail-inner">被冒险者搭救后，在半身人黑足餐馆做学徒。曾在艾瑞斯被卓尔奴隶贩子抓走时参与营救战斗，表现出色。</div></div>
+      <div class="npc-detail"><div class="npc-detail-inner">被冒险者搭救后在营地帮忙做杂活。曾在艾瑞斯被卓尔奴隶贩子抓走时参与营救战斗，表现出色，愈发坚定了成为勇士的决心。</div></div>
       <div class="npc-expand-hint">点击查看详情</div>
     </div>
 
@@ -911,7 +1033,7 @@ body {
       <div class="npc-name">雯德瑞尔·青叶</div>
       <div class="npc-race">木精灵 · 卫兵队长</div>
       <div class="npc-brief">卫兵巡逻队教官兼首任队长，刻薄严苛，讨厌呆在野外。</div>
-      <div class="npc-detail"><div class="npc-detail-inner">对下属极其严格，偷懒者会被他用连枷抽屁股。与常见木精灵不同，讨厌呆在野外。据传闻曾杀死过一个暴力独裁的木精灵德鲁伊，被氏族追捕逃亡至此。</div></div>
+      <div class="npc-detail"><div class="npc-detail-inner">对下属极其严格，偷懒者会被他用连枷抽打。与常见木精灵不同，讨厌呆在野外。据传闻曾杀死过一个暴力独裁的木精灵德鲁伊，被氏族追捕逃亡至此。</div></div>
       <div class="npc-expand-hint">点击查看详情</div>
     </div>
 
@@ -919,31 +1041,31 @@ body {
       <div class="npc-name">维斯</div>
       <div class="npc-race">？？？ · 神秘乞丐</div>
       <div class="npc-brief">极其神出鬼没，从未乞讨过任何东西，反而在奇怪处帮助他人。</div>
-      <div class="npc-detail"><div class="npc-detail-inner">见过他的人都认为他是乞丐，但从未被乞讨过任何东西。有人猜测他在开凿星芒学院的地下通道网络。</div></div>
+      <div class="npc-detail"><div class="npc-detail-inner">见过他的人都认为他是乞丐，但没有人被他乞讨过任何东西——反倒会在某些奇怪的地方被对方帮助。有人猜测此人正在开凿星芒学院的地下通道网络。</div></div>
       <div class="npc-expand-hint">点击查看详情</div>
     </div>
 
     <div class="npc-card" onclick="this.classList.toggle('expanded')">
       <div class="npc-name">小提姆</div>
       <div class="npc-race">人类 · 男孩</div>
-      <div class="npc-brief">小天才</div>
-      <div class="npc-detail"><div class="npc-detail-inner">不知父母去向，跟随货船来到小镇港口。在码头展现出出色的三龙棋技艺，被泰亚墨瑞亚斯看中并资助。被大法师收留，成为学院第一批学生之一。</div></div>
+      <div class="npc-brief">不知父母去向，靠乞讨为生，拥有出色的三龙棋天赋。</div>
+      <div class="npc-detail"><div class="npc-detail-inner">跟随货船来到学院镇的港口。在码头上表现出出色的三龙棋技艺，被泰亚墨瑞亚斯看中并资助。展现出出色的聪慧与领悟力后被大法师收留，即将成为学院的第一批学生。</div></div>
       <div class="npc-expand-hint">点击查看详情</div>
     </div>
-     
-      <div class="npc-card" onclick="this.classList.toggle('expanded')">
+
+    <div class="npc-card" onclick="this.classList.toggle('expanded')">
       <div class="npc-name">泰亚墨瑞亚斯</div>
-      <div class="npc-race">人类</div>
-      <div class="npc-brief">公子哥</div>
-      <div class="npc-detail"><div class="npc-detail-inner">墨瑞亚斯家族的公子哥，心地善良，资助了小天才，现出海离开了学院。</div></div>
+      <div class="npc-race">人类 · 墨瑞亚斯家族</div>
+      <div class="npc-brief">墨瑞亚斯家族的公子哥，心地善良，资助了小提姆。</div>
+      <div class="npc-detail"><div class="npc-detail-inner">发现小提姆的棋艺天赋后资助其入学。与冒险者道别后出海，离开了学院。其家族佩剑「泰亚墨瑞亚斯的刺剑」留赠予冒险者。</div></div>
       <div class="npc-expand-hint">点击查看详情</div>
     </div>
 
     <div class="npc-card" onclick="this.classList.toggle('expanded')">
       <div class="npc-name">虫栖·洛雯</div>
       <div class="npc-race">虫语矮人 · 首领</div>
-      <div class="npc-brief">虫语矮人首领，现在学院处定居</div>
-      <div class="npc-detail"><div class="npc-detail-inner">发布了收集虫卵等常驻任务。喜欢抬头45度望天，特别喜欢虫子，性格有点淡淡的轴。奸商本色。</div></div>
+      <div class="npc-brief">虫语矮人首领，在幽暗地域任务中给予冒险者帮助，后移居学院镇。</div>
+      <div class="npc-detail"><div class="npc-detail-inner">能与昆虫沟通并驱使巨型昆虫。委托冒险者寻找会建房子的昆虫，在赐福仪式后借出十只巨型工蜂建设诸星之证试炼场。发布了收集虫卵等常驻任务。喜欢抬头45度望天，性格有点淡淡的轴。</div></div>
       <div class="npc-expand-hint">点击查看详情</div>
     </div>
 
@@ -951,7 +1073,15 @@ body {
       <div class="npc-name">蜜琪儿</div>
       <div class="npc-race">荧蜂族 · 蜂后</div>
       <div class="npc-brief">濒临灭绝的荧蜂族蜂后，被法齐奥里说服后移居星芒学院。</div>
-      <div class="npc-detail"><div class="npc-detail-inner">会说话的变异蜜蜂族群之首领。要求移栽魔法植物作为食物，在蜜琪儿的指引下发现了圣神魔法橡树和火焰草莓。</div></div>
+      <div class="npc-detail"><div class="npc-detail-inner">会说话的变异蜜蜂族群首领。要求移栽魔法植物作为食物，在蜜琪儿的指引下发现了圣神魔法橡树和火焰草莓。喜食火焰草莓。荧蜂族负责为学院提供魔法蜂蜜，协助魔法植物栽培。</div></div>
+      <div class="npc-expand-hint">点击查看详情</div>
+    </div>
+
+    <div class="npc-card" onclick="this.classList.toggle('expanded')">
+      <div class="npc-name">格伦</div>
+      <div class="npc-race">山丘矮人 · 首领</div>
+      <div class="npc-brief">山丘矮人首领，阿加扎尔的旧识，与学院签有平等契约。</div>
+      <div class="npc-detail"><div class="npc-detail-inner">识破红巫师的虚假深水城订单陷阱，迫使冒险者签订平等契约。营地遭红巫师袭击后，与学院关系更加紧密。玛拉·桑德亲自前往救治伤员。</div></div>
       <div class="npc-expand-hint">点击查看详情</div>
     </div>
 
@@ -960,12 +1090,52 @@ body {
 
 <!-- ─── AREAS ─── -->
 <section class="section" id="sec-areas">
-  <h2 class="section-heading">地域图志</h2>
+<h2 class="section-heading">地域图志</h2>
 
   <div class="area-card">
     <div class="area-header">
       <span class="area-icon">🏛️</span>
-      <span class="area-name">星芒学院主校区</span>
+      <span class="area-name">星芒塔 · 学院主塔</span>
+    </div>
+    <p class="area-desc">学院的核心建筑，依山而建，面朝剑海。塔身融入精灵建筑美学，以白色石材为主，嵌有星力共鸣水晶。塔顶设有阿加扎尔布设的元素防御法阵核心，可在学院遭受攻击时展开多层魔法护盾。伊利·库尔的私人书房与委员会议事厅均设于塔内。塔门以古精灵语镌刻学院格言：「星光不择其照者」。</p>
+  </div>
+
+  <div class="area-card">
+    <div class="area-header">
+      <span class="area-icon">🔭</span>
+      <span class="area-name">星象观测台</span>
+    </div>
+    <p class="area-desc">位于学院后山最高处，由泰伦·霍恩亲自设计并长期驻守。观测台内布满星象符文与精密观测仪器，穹顶可开合。泰伦几乎不离此地，学院的星力预警系统亦在此运转。</p>
+  </div>
+
+  <div class="area-card">
+    <div class="area-header">
+      <span class="area-icon">⚔️</span>
+      <span class="area-name">诸星之证试炼场</span>
+    </div>
+    <p class="area-desc">由虫语矮人借出的巨型工蜂协助建造，是学院学生进行魔法实战训练的场所。试炼场的设计融合了矮人工匠技艺与精灵魔法符文，可模拟多种战斗环境。</p>
+  </div>
+
+  <div class="area-card">
+    <div class="area-header">
+      <span class="area-icon">🐝</span>
+      <span class="area-name">荧蜂族巢穴</span>
+    </div>
+    <p class="area-desc">蜜琪儿与荧蜂族群移居后在学院南侧花园建立的巢穴。周围移植了魔法植物，包括火焰草莓与圣神魔法橡树。荧蜂族负责为学院提供魔法蜂蜜，同时协助花园的魔法植物栽培。</p>
+  </div>
+
+  <div class="area-card">
+    <div class="area-header">
+      <span class="area-icon">🛡️</span>
+      <span class="area-name">三层防御法阵</span>
+    </div>
+    <p class="area-desc">由阿加扎尔主持布设的环形防御体系。外层为元素壁垒，可偏转物理攻击；中层为幻术迷雾，由伊利·库尔加持，可迷惑入侵者；内层为星力护盾，与泰伦的星象观测台联动，能预判威胁并提前预警。在学院法阵内，伊利·库尔与泰伦·霍恩可发挥完整的传奇施法能力。</p>
+  </div>
+
+  <div class="area-card">
+    <div class="area-header">
+      <span class="area-icon">🏛️</span>
+      <span class="area-name">星芒学院主校区</span>     <span class="area-name">星芒学院主校区</span>
     </div>
     <p class="area-desc">坐落于无冬城近郊的魔法学府，以"无种族壁垒、包容多元魔法"为建校理念。学院法阵内，传奇法师可发挥完整的20级力量。学院仍在建设完善中，拥有诸星之证试炼场、荧蜂族巢穴等重要设施。</p>
   </div>
@@ -1095,7 +1265,29 @@ body {
   </div>
 
   <div class="quest-card">
+    <div class="quest-pin"></div>
     <div class="quest-number">7</div>
+    <div class="quest-info">
+      <div class="quest-name">寻人启事</div>
+      <div class="quest-meta">发布人：药剂师 斯特鲁伽·钢盾 · 3人及以下 · 线上文字团 · 均等5+</div>
+      <p class="quest-desc">草药学徒蒂德莉·蒙特三天前前往学院东北方向的丘陵地带采药，至今未归，身上携带仅够三天的口粮与水，恳求冒险者寻求其下落。</p>
+      <span class="quest-reward">酬金 300 GP</span>
+    </div>
+  </div>
+
+  <div class="quest-card">
+    <div class="quest-pin"></div>
+    <div class="quest-number">8</div>
+    <div class="quest-info">
+      <div class="quest-name">商道安保</div>
+      <div class="quest-meta">发布人：雯德瑞尔·青叶 · 2人及以上 · 线上语音/线下面团</div>
+      <p class="quest-desc">据前往深水城通商的商队报告，一伙衣着打扮奇特的人在商道中途收取过路费。现招募非官方协助者前去确认情况。</p>
+      <span class="quest-reward">酬金 130 GP · 可报销食宿</span>
+    </div>
+  </div>
+
+  <div class="quest-card">
+    <div class="quest-number">9</div>
     <div class="quest-info">
       <div class="quest-name">粮食危机</div>
       <div class="quest-meta">发布人：法师助理 艾瑞 · 不限形式 · 不限人数</div>
